@@ -1,18 +1,11 @@
 {
-  "name": "ts-goit-hw",
+  "name": "typescript-homework-module-2",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  "scripts": {
-    "start": "web-dev-server --node-resolve --watch",
-    "dev": "tsc -w & web-dev-server --node-resolve --watch",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "@web/dev-server": "^0.4.1",
-    "eslint": "^8.55.0"
+  "dependencies": {
+    "typescript": "^5.1.5"
   }
 }
