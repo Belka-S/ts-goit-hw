@@ -5,7 +5,14 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "scripts": {
+    "start": "web-dev-server --node-resolve --watch",
+    "dev": "tsc -w & web-dev-server --node-resolve --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "dependencies": {
+    "@web/dev-server": "^0.4.1",
+    "eslint": "^8.55.0",
     "typescript": "^5.1.5"
   }
 }
