@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "web-dev-server --node-resolve --watch",
-    "dev": "tsc -w & web-dev-server --node-resolve --watch",
+    "dev": "tsc -w & nodemon dist/index.js &  web-dev-server --node-resolve --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -14,5 +14,8 @@
   "devDependencies": {
     "@web/dev-server": "^0.4.1",
     "eslint": "^8.55.0"
+  },
+  "dependencies": {
+    "nodemon": "^3.0.2"
   }
 }
