@@ -15,5 +15,3 @@
 //     this.grade = grade;
 //   }
 // }
-
-export {};
