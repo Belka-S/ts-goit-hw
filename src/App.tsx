@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import TodoItem from "./Components/TodoItem";
-import AddTodoForm from "./Components/AddTodoForm";
-import "./App.css";
+import { useState } from 'react';
+import TodoItem from './Components/TodoItem';
+import AddTodoForm from './Components/AddTodoForm';
+import './App.css';
 
 interface Todo {
   id: number;
@@ -17,7 +17,7 @@ function App() {
   };
 
   const deleteTodo = (id: number) => {
-    const newTodos = todos.filter((todo) => todo.id !== id);
+    const newTodos = todos.filter(todo => todo.id !== id);
     setTodos(newTodos);
   };
 
@@ -26,7 +26,7 @@ function App() {
       <h1>Todo List</h1>
       <AddTodoForm onAdd={addTodo} />
       <ul>
-        {todos.map((todo) => (
+        {todos.map(todo => (
           <TodoItem key={todo.id} todo={todo} onDelete={deleteTodo} />
         ))}
       </ul>
