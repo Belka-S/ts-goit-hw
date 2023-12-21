@@ -1,8 +1,18 @@
-import React, { createContext, useMemo, useState, useContext } from "react";
-import noop from "lodash/noop";
+import React, { createContext, useMemo, useState, useContext } from 'react';
+import noop from 'lodash/noop';
 
-type MenuIds = "first" | "second" | "last";
+type MenuIds = 'first' | 'second' | 'last';
 type Menu = { id: MenuIds; title: string };
+
+type SelectedMenu = {};
+
+type MenuSelected = {};
+
+type MenuAction = {};
+
+type PropsProvider = {};
+
+type PropsMenu = {};
 
 // Додати тип Menu Selected
 
@@ -28,14 +38,14 @@ function MenuProvider({ children }: PropsProvider) {
     () => ({
       onSelectedMenu: setSelectedMenu,
     }),
-    []
+    [],
   );
 
   const menuContextSelected = useMemo(
     () => ({
       selectedMenu,
     }),
-    [selectedMenu]
+    [selectedMenu],
   );
 
   return (
@@ -57,10 +67,10 @@ function MenuComponent({ menus }: PropsMenu) {
 
   return (
     <>
-      {menus.map((menu) => (
+      {menus.map(menu => (
         <div key={menu.id} onClick={() => onSelectedMenu({ id: menu.id })}>
-          {menu.title}{" "}
-          {selectedMenu.id === menu.id ? "Selected" : "Not selected"}
+          {menu.title}{' '}
+          {selectedMenu.id === menu.id ? 'Selected' : 'Not selected'}
         </div>
       ))}
     </>
@@ -70,16 +80,16 @@ function MenuComponent({ menus }: PropsMenu) {
 export function ComponentApp() {
   const menus: Menu[] = [
     {
-      id: "first",
-      title: "first",
+      id: 'first',
+      title: 'first',
     },
     {
-      id: "second",
-      title: "second",
+      id: 'second',
+      title: 'second',
     },
     {
-      id: "last",
-      title: "last",
+      id: 'last',
+      title: 'last',
     },
   ];
 
